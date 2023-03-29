@@ -1,0 +1,81 @@
+@font-face {     
+    font-family: 'Boxed';     
+    src: url("https://cdn.discordapp.com/attachments/783678487231856661/1006777437444653117/BoxedRoundSemibold.ttf"); 
+}
+
+:root {
+    --fontSizeMessage: .7vw;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: block;
+    position: absolute;
+    left: 1.5vw;
+    width: 13%;
+    height: 50%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.mapOff {
+    position: absolute;
+    bottom: 2vw;
+}
+
+.mapOn {
+    position: absolute;
+    bottom: 12vw;
+}
+
+.notify {
+    position: relative;
+    padding: .6vw;
+    margin-top: 1vw;
+    max-width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: .5vw;
+    animation: fadeIn .5s ease 0s 1 normal forwards;
+    box-shadow: 0 0 5px black;
+}
+
+.notify h1 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Boxed';
+    font-size: .7vw;
+    font-size: var(--fontSizeMessage);
+    font-weight: 800;
+    color: white;
+    padding-left: .2vw;
+    text-align: left;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+}
